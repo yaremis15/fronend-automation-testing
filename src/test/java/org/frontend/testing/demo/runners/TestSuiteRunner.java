@@ -9,7 +9,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(publish = true,
         features = {"src/test/resources/features.demo"},
-        glue = {"org.fronend.testing.reto.steps.hooks"},
+        glue = {"org.frontend.testing.demo.steps"},
         tags = "@navigateToPageHome",
         snippets = CAMELCASE)
 
