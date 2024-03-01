@@ -10,9 +10,8 @@ import static org.frontend.testing.demo.steps.hooks.Actors.COMMON_ACTOR;
 
 public class steps {
     @Dado("que Yaremis quiere validar el ingreso a la pagina Demo Qa")
-    public void navigateToHomePage() throws InterruptedException {
+    public void navigateToHomePage() {
         COMMON_ACTOR.attemptsTo(Open.browserOn().thePageNamed("pages.demo"));
-        Thread.sleep(10000);
 
     }
 
@@ -20,6 +19,7 @@ public class steps {
     public void ingreseLaUrlEnElBuscador() {
 
     }
+
     @Entonces("podra validar el ingreso a la pagina web Demo Qa")
     public void podraValidarElIngresoALaPaginaWebDemoQa() {
 
