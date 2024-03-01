@@ -1,4 +1,4 @@
-package org.fronend.testing.reto.steps.hooks;
+package org.frontend.testing.demo.steps.hooks;
 
 import net.serenitybdd.screenplay.Actor;
 

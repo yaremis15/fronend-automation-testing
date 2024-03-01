@@ -1,4 +1,4 @@
-package org.fronend.testing.reto.steps.hooks;
+package org.frontend.testing.demo.steps.hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.fronend.testing.reto.steps.hooks.Actors.COMMON_ACTOR;
+import static org.frontend.testing.demo.steps.hooks.Actors.COMMON_ACTOR;
 
 public class Hooks {
 

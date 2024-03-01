@@ -1,10 +1,8 @@
-package org.fronend.testing.reto.steps.hooks;
+package org.frontend.testing.demo.steps.hooks;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import org.eclipse.jetty.websocket.common.events.EventDriverFactory;
-import org.fronend.testing.reto.pages.register.page.RegisterUsePege;
 
 public class RegisterSteps {
 

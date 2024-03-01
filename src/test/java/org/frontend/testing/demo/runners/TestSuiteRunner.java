@@ -1,4 +1,4 @@
-package org.fronend.testing.reto.runners;
+package org.frontend.testing.demo.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;

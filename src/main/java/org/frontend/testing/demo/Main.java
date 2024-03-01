@@ -1,4 +1,4 @@
-package org.fronend.testing.reto;
+package org.frontend.testing.demo;
 
 public class Main {
     public static void main(String[] args) {

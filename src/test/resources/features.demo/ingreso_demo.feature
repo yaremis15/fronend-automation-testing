@@ -1,6 +1,6 @@
 # language: es
 
-
+@navigateToPageHome
 Característica: Realizar el ingreso a la pagina web Demo Qa
 
   Escenario: Ingreso a la pagina web Demo Qa

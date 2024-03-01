@@ -1,4 +1,4 @@
-package org.fronend.testing.reto.utils;
+package org.frontend.testing.demo.utils;
 
 import java.io.File;
 import java.io.IOException;
