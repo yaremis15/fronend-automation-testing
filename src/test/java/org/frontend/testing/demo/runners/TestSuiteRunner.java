@@ -10,7 +10,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(publish = true,
         features = {"src/test/resources/features.demo"},
         glue = {"org.frontend.testing.demo.steps"},
-        tags = "@navigateToPageHome",
+        tags = "@registerNewUser",
         snippets = CAMELCASE)
 
 public class TestSuiteRunner {

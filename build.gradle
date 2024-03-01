@@ -45,6 +45,7 @@ ext {
     SLF4J_VERSION = '2.0.4'
     ASSERTJ_CORE_VERSION = '3.22.0'
     APACHE_POI_VERSION = '5.2.3'
+    LOMBOK = '1.18.26'
 }
 
 dependencies {
@@ -66,6 +67,9 @@ dependencies {
     testImplementation "org.assertj:assertj-core:${ASSERTJ_CORE_VERSION}"
     implementation "org.apache.poi:poi:${APACHE_POI_VERSION}"
     implementation "org.apache.poi:poi-ooxml:${APACHE_POI_VERSION}"
+    implementation "org.projectlombok:lombok:${LOMBOK}"
+    compileOnly "org.projectlombok:lombok:${LOMBOK}"
+    annotationProcessor "org.projectlombok:lombok:${LOMBOK}"
 }
 
 test {
