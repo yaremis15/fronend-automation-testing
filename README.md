@@ -1,6 +1,6 @@
-# adl-workshop-e2e-automation-testing
+# ui-demo-automation-framework
 
-Proyecto de automatización E2E para el Workshop de ADL.
+Repositorio del framework de automatización para pruebas de ui testing sobre la pagina web DEMO QA.
 ***
 
 ## 👷 Detalles del Tester
