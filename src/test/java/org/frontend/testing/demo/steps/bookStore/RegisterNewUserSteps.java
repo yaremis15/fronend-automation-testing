@@ -1,11 +1,8 @@
-package org.frontend.testing.demo.steps;
+package org.frontend.testing.demo.steps.bookStore;
 
 import io.cucumber.java.es.Cuando;
-import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import net.serenitybdd.screenplay.actions.Open;
-import org.frontend.testing.demo.models.RegisterNewUserData;
-import org.frontend.testing.demo.tasks.register.RegisterNewUserTask;
+import org.frontend.testing.demo.tasks.bookStore.RegisterNewUserTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,13 +1,12 @@
-package org.frontend.testing.demo.tasks.register;
+package org.frontend.testing.demo.tasks.bookStore;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
-import org.frontend.testing.demo.models.RegisterNewUserData;
-import org.frontend.testing.demo.pages.login.LoginPage;
-import org.frontend.testing.demo.pages.register.RegisterPage;
+import org.frontend.testing.demo.pages.bookStore.LoginPage;
+import org.frontend.testing.demo.pages.bookStore.RegisterPage;
 
 import java.util.Map;
 

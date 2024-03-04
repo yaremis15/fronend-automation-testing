@@ -1,4 +1,4 @@
-package org.frontend.testing.demo.pages.login;
+package org.frontend.testing.demo.pages.bookStore;
 
 import net.serenitybdd.screenplay.targets.Target;
 
