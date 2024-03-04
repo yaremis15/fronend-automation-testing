@@ -29,7 +29,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Run frontend E2E test
-        run: gradle clean test -Dheadless.mode=false -Dcucumber.filter.tags="@testCI"
+        run: ./gradlew clean test reports -Dheadless.mode=true -Dcucumber.filter.tags="@testCI"
 
       - name: Generate reports
         run: ./gradlew reports
