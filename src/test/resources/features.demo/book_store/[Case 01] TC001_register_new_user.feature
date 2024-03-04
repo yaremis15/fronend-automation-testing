@@ -6,7 +6,7 @@ Característica: [Caso 1] - Realizar el registro de un nuevo usuario en Book Sto
   Regla de negocio: Las contraseñas deben tener al menos un carácter no alfanumérico, un dígito ('0'-'9'), una mayúscula ('A'-'Z'),
   una minúscula ('a'-'z'), un carácter especial y la contraseña debe tener ocho caracteres o más.
 
-    @smokeTest @TC_001
+    @smokeTest @TC_001 @testCI
     Esquema del escenario: [TC 001] Realizar el registro de un nuevo usuario en Book Store Application
       Dado que Yaremis ingresa al modulo de "Book Store Application -> Login" de la aplicación
       Cuando ella diligencia la información de los campos requeridos
