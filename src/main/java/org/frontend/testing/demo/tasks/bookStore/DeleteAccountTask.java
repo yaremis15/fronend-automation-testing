@@ -22,14 +22,12 @@ public class DeleteAccountTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Scroll.to(DELETE_ACCOUNT_BUTTON),
+
                 Click.on(DELETE_ACCOUNT_BUTTON.waitingForNoMoreThan(Duration.ofSeconds(8))),
 
-                Scroll.to(DELETE_ACCOUNT_BUTTON),
                 Click.on(OK_BUTTON_TO_DELETE_ACCOUNT).afterWaitingUntilEnabled(),
-                WaitToLoad.theMiliSeconds(3000),
-
-                SwitchToAlert.confirmation(),
-                WaitToLoad.theMiliSeconds(3000)
+                WaitToLoad.theMiliSeconds(1000)
         );
     }
 

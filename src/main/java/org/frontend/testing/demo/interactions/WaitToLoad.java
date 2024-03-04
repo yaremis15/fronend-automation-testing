@@ -9,8 +9,7 @@ import net.serenitybdd.screenplay.annotations.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Subject("{0} waits for '#seconds' milliseconds")
-public class WaitToLoad implements Interaction, IsHidden {
+public class WaitToLoad implements Interaction {
 
     private static final Logger logger = LoggerFactory.getLogger(WaitToLoad.class);
 
@@ -26,6 +25,7 @@ public class WaitToLoad implements Interaction, IsHidden {
 
 
     @Override
+    @Step("{0} waits for '#milliseconds' milliseconds")
     public <T extends Actor> void performAs(T actor) {
         try {
             Thread.sleep(milliseconds);

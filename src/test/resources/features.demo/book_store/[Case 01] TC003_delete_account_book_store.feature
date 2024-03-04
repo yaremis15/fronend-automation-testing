@@ -16,6 +16,9 @@ Característica: [Caso 1] - Realizar la eliminación de una cuenta creada en el 
         | <userName> | <password> |
       Cuando ella elimina la cuenta de su usuario del aplicativo
       Entonces se podrá visualizar la alerta con el mensaje "User Deleted." al confirmar la eliminación
+      Y no se deberá permitir el ingreso al aplicativo con las credenciales de la cuenta eliminada
+        | UserName   | Password   |
+        | <userName> | <password> |
       Ejemplos:
         | userName | password  |
         | test01   | Test2023* |

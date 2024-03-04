@@ -3,26 +3,22 @@ package org.frontend.testing.demo.steps.bookStore;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import net.serenitybdd.screenplay.Performable;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.HtmlAlert;
-import net.serenitybdd.screenplay.actions.Switch;
+import io.cucumber.java.es.Y;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import net.serenitybdd.screenplay.ui.Button;
+import org.frontend.testing.demo.interactions.SwitchToAlert;
 import org.frontend.testing.demo.interactions.WaitToLoad;
 import org.frontend.testing.demo.tasks.bookStore.DeleteAccountTask;
 import org.frontend.testing.demo.tasks.bookStore.LoginUserTask;
-import org.openqa.selenium.Keys;
 
 import java.util.List;
 import java.util.Map;
 
 import static org.frontend.testing.demo.pages.bookStore.LoginPage.BUTTON_LOGIN;
+import static org.frontend.testing.demo.pages.bookStore.LoginPage.LABEL_INVALID_LOGIN;
 import static org.frontend.testing.demo.pages.bookStore.ProfilePage.LABEL_USER_NAME;
-import static org.frontend.testing.demo.pages.forms.PracticeFormPage.LABEL_FORM_TITLE_COMPLETE;
 import static org.frontend.testing.demo.steps.hooks.Actors.COMMON_ACTOR;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.frontend.testing.demo.utils.Constants.INVALID_LOGIN_MESSAGE;
 
 public class DeleteAccountSteps {
 
@@ -46,7 +42,21 @@ public class DeleteAccountSteps {
     @Entonces("se podrá visualizar la alerta con el mensaje {string} al confirmar la eliminación")
     public void validateAlertMessageForDeleteAccount(String messageAlert) {
         COMMON_ACTOR.attemptsTo(
-                Ensure.that(BUTTON_LOGIN).isDisplayed()
+                SwitchToAlert.confirmation(),
+                Ensure.that(BUTTON_LOGIN).isDisplayed(),
+                WaitToLoad.theMiliSeconds(1000)
+        );
+    }
+
+    @Y("no se deberá permitir el ingreso al aplicativo con las credenciales de la cuenta eliminada")
+    public void notAllowUserToLogin(List<Map<String, String>> userData) {
+        Map<String, String> userCredentials = userData.get(0);
+
+        COMMON_ACTOR.attemptsTo(
+                LoginUserTask.withUserData(userCredentials),
+                Scroll.to(LABEL_INVALID_LOGIN),
+                WaitToLoad.theMiliSeconds(1000),
+                Ensure.that(LABEL_INVALID_LOGIN).text().isEqualTo(INVALID_LOGIN_MESSAGE)
         );
     }
 }
