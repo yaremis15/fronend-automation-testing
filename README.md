@@ -22,7 +22,7 @@ Ejecute el siguiente comando para configurar gradle correctamente:
 Para realizar la ejecución de los test utilicé el siguiente comando:
 
 ```bash
-./gradlew clean test --no-build-cache -D environment=dev -D cucumber.filter.tags=""
+./gradlew clean test --no-build-cache -D cucumber.filter.tags=""
 ```
 
 **Opcional**: Ir a las clases de la carpeta **runners** `src/test/java/org/fronend/testing/reto/runners/TestSuiteRunner.java` y
